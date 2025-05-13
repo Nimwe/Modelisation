@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>80</x>
+      <y>0</y>
+      <w>250</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Site de Covoiturage </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>340</x>
+      <y>680</y>
+      <w>210</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>Stagiaire AFPA
+--
+- id : int 
+--
+
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>100</x>
+      <y>680</y>
+      <w>210</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>Personnel AFPA
+--
+- id : int
+--
+
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>750</x>
+      <y>350</y>
+      <w>320</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>Trajet
+--
+- id : int
+- heureDépart
+lieuDépart
+joursTrajets
+- régulier ou ponctuel
+--
+- isAller: boolean
+- isRetour: boolean
+- isRegulier : boolean =&gt; définir date validité
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>500</x>
+      <y>160</y>
+      <w>210</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>Voiture 
+--
+- id : int
+- int nbPlaces 4;
+- typeVéhicule
+--
+- isPlaceBagage : boolean
+- isFumeur : boolean
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>90</x>
+      <y>370</y>
+      <w>320</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>/Utilisateurs/
+--
+- id : int
+- validiteInscription : date (=&gt; Calcul de durée)
+--
+
+--
+idAFpA
+Consulter trajet
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>360</x>
+      <y>550</y>
+      <w>30</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>270</x>
+      <y>550</y>
+      <w>30</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>600</x>
+      <y>280</y>
+      <w>30</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;170.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>400</x>
+      <y>430</y>
+      <w>370</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=0..*
+Conduit &gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;350.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>400</x>
+      <y>480</y>
+      <w>370</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=0..3
+m2=0..*
+Participe &gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;350.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>750</x>
+      <y>810</y>
+      <w>370</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>Voyage
+--
+- id : int
+--
+if isAller = true &amp;&amp; isRetour = true {
+Voyage }</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>910</x>
+      <y>540</y>
+      <w>30</w>
+      <h>290</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;270.0</additional_attributes>
+  </element>
+</diagram>
