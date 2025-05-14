@@ -1,20 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="15.1">
-  <zoom_level>9</zoom_level>
+  <zoom_level>6</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>792</x>
-      <y>585</y>
-      <w>225</w>
-      <h>171</h>
+      <x>630</x>
+      <y>246</y>
+      <w>150</w>
+      <h>114</h>
     </coordinates>
     <panel_attributes>ComptePremium
 --
 
 - infoPaiement :  String[]
-- playlistPremium :  PlaylistFilms
-- intoFamille: boolean
 
 --
 
@@ -24,12 +22,12 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>540</x>
-      <y>297</y>
-      <w>189</w>
-      <h>171</h>
+      <x>402</x>
+      <y>54</y>
+      <w>126</w>
+      <h>114</h>
     </coordinates>
-    <panel_attributes>/Utilisateur/
+    <panel_attributes>/CompteUtillisateur/
 --
 
 - nom: String
@@ -37,9 +35,8 @@
 
 --
 
-+ajouterFilm()
-+regarderFilm()
-+afficherDerniersFilms()
+
+
 
 </panel_attributes>
     <additional_attributes/>
@@ -47,53 +44,52 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>504</x>
-      <y>585</y>
-      <w>225</w>
-      <h>171</h>
+      <x>120</x>
+      <y>246</y>
+      <w>150</w>
+      <h>114</h>
     </coordinates>
     <panel_attributes>CompteDecouverte
 --
 
-- playlistDecouverte :  PlaylistFilms</panel_attributes>
+</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>594</x>
-      <y>459</y>
-      <w>27</w>
-      <h>144</h>
+      <x>180</x>
+      <y>162</y>
+      <w>276</w>
+      <h>96</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;140.0</additional_attributes>
+    <additional_attributes>440.0;10.0;440.0;90.0;10.0;90.0;10.0;140.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>666</x>
-      <y>459</y>
-      <w>252</w>
-      <h>144</h>
+      <x>486</x>
+      <y>162</y>
+      <w>228</w>
+      <h>96</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;90.0;260.0;90.0;260.0;140.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0;360.0;90.0;360.0;140.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>108</x>
-      <y>297</y>
-      <w>189</w>
-      <h>171</h>
+      <x>402</x>
+      <y>432</y>
+      <w>126</w>
+      <h>114</h>
     </coordinates>
     <panel_attributes>Film
 --
 
 - titre : String
 - dateSortie : Date
-- listeActeurs : List&lt;String&gt;
 
 </panel_attributes>
     <additional_attributes/>
@@ -101,10 +97,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1044</x>
-      <y>378</y>
-      <w>207</w>
-      <h>144</h>
+      <x>798</x>
+      <y>108</y>
+      <w>138</w>
+      <h>96</h>
     </coordinates>
     <panel_attributes>Famille
 --
@@ -117,35 +113,25 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>288</x>
-      <y>369</y>
-      <w>270</w>
-      <h>45</h>
+      <x>456</x>
+      <y>354</y>
+      <w>30</w>
+      <h>90</h>
     </coordinates>
-    <panel_attributes>lt=-
+    <panel_attributes>lt=-&gt;&gt;&gt;&gt;
 m1=0..*
 m2=1..*
-&lt; regarde </panel_attributes>
-    <additional_attributes>10.0;20.0;280.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>414</x>
-      <y>225</y>
-      <w>27</w>
-      <h>180</h>
-    </coordinates>
-    <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes>10.0;180.0;10.0;10.0</additional_attributes>
+  
+ </panel_attributes>
+    <additional_attributes>10.0;130.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>333</x>
-      <y>108</y>
-      <w>189</w>
-      <h>126</h>
+      <x>402</x>
+      <y>246</y>
+      <w>126</w>
+      <h>114</h>
     </coordinates>
     <panel_attributes>PlaylistFilms
 --
@@ -155,20 +141,81 @@ m2=1..*
 +comptePlaylist() :  boolean
 +afficherFilms()
 +effacerFilm()
++afficherDerniersFilms()
++ajouterFilm()
++regarderFilm()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>774</x>
+      <y>198</y>
+      <w>120</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;&gt;&gt;
+m1=1..5
+m2=  0..1</panel_attributes>
+    <additional_attributes>10.0;180.0;150.0;180.0;150.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>522</x>
+      <y>282</y>
+      <w>120</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1..*
+m2=1
+&lt; crée</panel_attributes>
+    <additional_attributes>10.0;20.0;180.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>264</x>
+      <y>282</y>
+      <w>150</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1
+détient &gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;230.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>636</x>
+      <y>432</y>
+      <w>126</w>
+      <h>114</h>
+    </coordinates>
+    <panel_attributes>Acteur
+--
+
+- nom: String
+- prenom: String
+
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1008</x>
-      <y>513</y>
-      <w>180</w>
-      <h>189</h>
+      <x>522</x>
+      <y>480</y>
+      <w>126</w>
+      <h>30</h>
     </coordinates>
-    <panel_attributes>lt=-&gt;&gt;&gt;&gt;
-m1=1
-m2=  1..5 </panel_attributes>
-    <additional_attributes>10.0;180.0;150.0;180.0;150.0;10.0</additional_attributes>
+    <panel_attributes>lt=-
+m1=0..*
+m2=0..*
+&lt; joue</panel_attributes>
+    <additional_attributes>10.0;20.0;190.0;20.0</additional_attributes>
   </element>
 </diagram>
