@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>7</zoom_level>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>70</x>
+      <y>7</y>
+      <w>70</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>Médiathéque</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>602</x>
+      <y>42</y>
+      <w>196</w>
+      <h>119</h>
+    </coordinates>
+    <panel_attributes>Emprunt
+--
+- dateDebut : date
+- dateFin : date
+--
++ nbemprunt ()  
+(=&gt; if nbEmprunt &lt; 5 : boolean)
+--
+ 
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>91</x>
+      <y>399</y>
+      <w>147</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>Livre
+--
+- id : int
+--
+Livres consultables 
+uniquement sur place 
+=&gt; isEmpruntable : bolean
+--
+côte
+titre
+auteur(s)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>357</x>
+      <y>399</y>
+      <w>154</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>Bluray
+Prêtés avec caution
+--
+- id : int
+--
++ cautionBluray() : boolean
+--
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>245</x>
+      <y>399</y>
+      <w>105</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>Journal
+Uniquement sur place
+--
+- id: int
+--
+
+--
+titre
+date</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>686</x>
+      <y>154</y>
+      <w>21</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>161</x>
+      <y>203</y>
+      <w>266</w>
+      <h>133</h>
+    </coordinates>
+    <panel_attributes>Document
+--
+- id : int
+--
+Possible de mettre hors service un doc volé ou perdu
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1015</x>
+      <y>189</y>
+      <w>147</w>
+      <h>161</h>
+    </coordinates>
+    <panel_attributes>Usager
+--
+- id : int
+- cotisationRegle : boolean
+- cotisationAJour : boolean
+- cautionReglee : boolean
+--
+Possible de modifier caractéristiques (adresse etc )
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>665</x>
+      <y>287</y>
+      <w>112</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+IdGenerateur
+--
+
+--
+# genererId(): int
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>420</x>
+      <y>308</y>
+      <w>259</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;Implements&gt;&gt;</panel_attributes>
+    <additional_attributes>350.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>770</x>
+      <y>308</y>
+      <w>259</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;Implements&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;350.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>175</x>
+      <y>329</y>
+      <w>21</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>392</x>
+      <y>329</y>
+      <w>21</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>294</x>
+      <y>329</y>
+      <w>21</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>420</x>
+      <y>224</y>
+      <w>609</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=0..*
+m2=0..5
+&lt; Emprunter</panel_attributes>
+    <additional_attributes>850.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+</diagram>
